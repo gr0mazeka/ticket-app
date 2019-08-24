@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Ticket">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Ticket</title>
+    <link rel="stylesheet" href="dist/style.min.css">
+    <link href="js/select_jq/jquery-ui.css" rel="stylesheet" />
+    <link href="js/calendar/css/datepicker.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="background-color: #f1f1f1">
+    <div style="margin-bottom: 100px;"></div>
+
+
+    <div class="ticket">
+
+        <div class="ticket__choose clearfix">
+
+            <div class="ticket__col-subway">
+                <div class="ticket__label">
+                    <label>Маршрут</label>
+                </div>
+                <div class="ticket__select-route">
+                    <select class="ticket__cities-subways ticket__choose-select" autocomplete="off">
+                        <option value="0" selected disabled>Выберите маршрут</option>
+                        <option value="1">Пятигoрск-Анапа</option>
+                        <option value="2">Анапа-Пятигорск</option>
+                        <option value="3">Пятигорск-Лазаревское</option>
+                        <option value="4">Лазаревское-Пятигорск</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="ticket__col-cities ticket__col-route">
+                <div class="ticket__label">
+                    <label>Место отправления</label>
+                </div>
+                <div class="ticket__select-cities-from">
+                    <select class="ticket__cities-from ticket__choose-select" disabled autocomplete="off">
+                        <option value="0">Выберите место отправления</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="ticket__col-cities-to ticket__col-route">
+                <div class="ticket__label">
+                    <label>Место назначения</label>
+                </div>
+                <div class="ticket__select-cities-to">
+                    <select class="ticket__cities-to ticket__choose-select" disabled autocomplete="off">
+                        <option value="0">Выберите место назначения</option>
+                    </select>
+                </div>
+            </div>
+            <!-------------------------------- datepicker ------------------------------->
+            <div class="ticket__col-date-depart ticket__col-route">
+                <div class="ticket__label">
+                    <label>Дата отправления</label>
+                </div>
+                <div class="ticket__input-date-from">
+                    <input type='text'
+                        class="ticket__input-date-depart ticket__choose-select ticket__input-date_disabled"
+                        placeholder="В одну сторону" readonly data='datepicker' />
+                </div>
+            </div>
+
+            <div class="ticket__col-date-return ticket__col-route">
+                <div class="ticket__label">
+                    <label>Обратно</label>
+                </div>
+                <div class="ticket__input-date-to">
+                    <input type='text'
+                        class="ticket__input-date-return ticket__choose-select ticket__input-date_disabled"
+                        placeholder="Обратно" readonly data='datepicker' />
+                </div>
+            </div>
+            <!-------------------------------- datepicker ------------------------------->
+
+        </div>
+
+        <div class="ticket__box-error ticket__box-error-head"></div>
+
+        <div class="ticket__order-list clearfix">
+            <div class="ticket__order-list-direction"><span class="ticket__order-list-direction-text">В одну
+                    сторону:</span></div>
+            <div class="ticket__order-list-seat">
+                <span>Всего мест: </span>
+                <span class="ticket__order-list-seat-value">--</span>
+            </div>
+            <div class="ticket__order-list-select">
+                <span>Заказано: </span>
+                <span class="ticket__order-list-select-value">--</span>
+            </div>
+            <div class="ticket__order-list-parent">
+                <span>Взрослый: </span>
+                <span class="ticket__order-list-parent-price">---</span> &#8381;
+            </div>
+            <div class="ticket__order-list-child">
+                <span>Детский (до 16 лет): </span>
+                <span class="ticket__order-list-child-price">---</span> &#8381;
+            </div>
+        </div>
+
+        <div class="ticket__button-add clearfix">
+            <div class="ticket__icon_add"><span class="ticket__icomoon-user-plus"></span></div>
+            <div class="ticket__button-title">
+                <span class="ticket__button-txt">Добавить пассажира</span>
+            </div>
+            <div class="ticket__button-place">
+                <span class="ticket__button-free">Доступно для заказа: </span>
+                <span class="ticket__button-free-seat-count">--</span>
+            </div>
+        </div>
+
+        <div class="ticket__box-error ticket__box-error-footer"></div>
+
+        <div class="ticket__footer clearfix">
+            <div class="ticket__footer-agreement">
+                <label class="ticket__checkbox">
+                    <input class="ticket__checkbox-agreement" type="checkbox">
+                    <span class="ticket__checkbox-agreement-text">Подтверждаю правильность введенных данных, согласен на
+                        обработку данных</span>
+                </label>
+            </div>
+            <div class="ticket__footer-amount">Общая стоимость: <span class="ticket__footer-amount-value"> 0 </span> руб
+            </div>
+            <button class="button ticket__button-buy button_theme_blue button_size_m">
+                <span class="button__text">Оформить заказ</span>
+            </button>
+        </div>
+
+    </div>
+
+
+    <div class="loader__animation"><span class="loader__animation-img"></span></div>
+
+    <div style="margin-top: 200px;"></div>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/ticket.js"></script>
+    <!-- <script src="dist/ticket.min.js"></script> -->
+    <script src="js/calendar/js/datepicker.js"></script>
+    <script src="js/select_jq/jquery-ui.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,852 @@
+@import "ticket__font.post.css";
+
+$blue: #2196f3;
+$red: #e4097f;
+$test: #ff4c3e;
+$rouse: #eb469f;
+$cyan: #0098d6;
+$blue-gray: #f1f8ff;
+$darkblue: #003365;
+$button: #0098d6;
+$green: #78b92e;
+$orange: #ff6d00;
+$gray: #b1bdcc;
+$dark: #262e39;
+
+[class*=" ticket__icomoon-"],
+[class^="ticket__icomoon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  /*speak: none;*/
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ticket__icomoon {
+  &-user-plus:before {
+    content: "\e905";
+  }
+
+  &-ticket:before {
+    content: "\e939";
+    font-size: 25px;
+  }
+
+  &-ticket-user {
+    position: absolute;
+    margin-top: 3px;
+    font-size: 34px;
+    color: $blue;
+
+    &:before {
+      content: "\e903";
+    }
+  }
+
+  &-calendar-clock {
+    position: absolute;
+    margin-top: 5px;
+    font-size: 20px;
+
+    &:before {
+      content: "\e901";
+    }
+  }
+
+  &-bus {
+    position: absolute;
+    margin-top: 5px;
+    font-size: 20px;
+
+    &:before {
+      content: "\e906";
+    }
+  }
+}
+
+.ticket {
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+  width: 680px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  color: $dark;
+  border-bottom: 1px solid #dce2e4;
+
+  &__choose {
+    display: block;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    padding: 20px;
+    background-color: $blue;
+    box-shadow: 0 2px 6px 0 rgba(34, 34, 34, 0.75);
+
+    &-select {
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      height: 40px;
+      padding: 0 15px;
+
+      &:focus {
+        /* border: none; */
+        outline: none;
+      }
+    }
+  }
+
+  &__details {
+    border-radius: 5px;
+    padding: 20px;
+    background-color: $blue;
+    box-shadow: 0 2px 6px 0 rgba(34, 34, 34, 0.75);
+    margin-bottom: 20px;
+
+    &-info {
+      color: $darkblue;
+      font-size: 15px;
+      line-height: 28px;
+      margin-bottom: 10px;
+      padding-left: 10px;
+    }
+
+    &-route {
+      background-color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 10px 0;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      border: 1px solid $gray;
+      /*box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;*/
+    }
+
+    &-text {
+      margin-left: 35px;
+      font-weight: bold;
+    }
+
+    &-place {
+      background-color: #fff;
+      padding: 20px 0 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+      border: 1px solid $gray;
+    }
+
+    &-line {
+      border: none;
+      margin: 20px 0;
+      border-top: 1px solid $darkblue;
+      border-bottom: 1px solid $gray;
+    }
+  }
+
+  &__col-route {
+    float: left;
+    margin-bottom: 15px;
+  }
+
+  &__col-subway {
+    margin-bottom: 17px;
+  }
+
+  &__cities-subways {
+    width: 640px;
+  }
+
+  &__col-cities {
+    margin-right: 6px;
+  }
+
+  &__cities-from {
+    width: 317px;
+  }
+
+  &__cities-to {
+    width: 317px;
+  }
+
+  &__col-date-depart {
+    margin-right: 6px;
+  }
+
+  &__input-date-depart {
+    width: 283px;
+    border: 2px solid #fff;
+  }
+
+  &__input-date-return {
+    width: 283px;
+    border: 2px solid #fff;
+  }
+
+  &__input-date_disabled {
+    opacity: 0.7;
+    cursor: default;
+  }
+
+  &__label {
+    margin: 0 0 5px 3px;
+    color: white;
+  }
+
+  &__calendar {
+    padding: 20px 0 50px 0;
+
+    &-row {
+      display: block;
+      border-bottom: solid 1px #d3ebfe;
+    }
+
+    &-month {
+      display: inline-block;
+      width: 90px;
+      margin-left: 20px;
+      color: #646464;
+      font-size: 15px;
+      line-height: 30px;
+    }
+
+    &-day {
+      display: inline-block;
+      width: 57px;
+      border-radius: 3px;
+      text-align: center;
+      cursor: pointer;
+      color: #808080;
+      font-size: 15px;
+      line-height: 30px;
+
+      &:nth-child(9n + 1) {
+        margin-left: 114px;
+      }
+
+      &:hover {
+        background-color: $blue;
+        color: white;
+      }
+
+      &_active {
+        background-color: $blue;
+        color: white;
+      }
+    }
+  }
+
+  &__surname {
+    width: 100%;
+  }
+
+  &__order-list {
+    font-size: 12px;
+    color: #1265ac;
+    padding: 0 10px;
+    display: none;
+
+    &-direction {
+      margin-bottom: 10px;
+
+      &-text {
+        color: $dark;
+        border-bottom: 2px solid $orange;
+      }
+    }
+
+    &-seat {
+      float: left;
+      margin-right: 20px;
+      color: green;
+    }
+
+    &-select {
+      float: left;
+      margin-right: 20px;
+    }
+
+    &-child {
+      float: right;
+      margin-right: 20px;
+
+      &-price {
+        font-weight: bold;
+      }
+    }
+
+    &-parent {
+      float: right;
+
+      &-price {
+        font-weight: bold;
+      }
+    }
+
+    &_disabled {
+      display: none;
+    }
+  }
+
+  /* -------------------
+    Button add ticket
+   ------------------- */
+  &__button-add {
+    text-align: center;
+    color: #fff;
+    display: block;
+    height: 46px;
+    border-radius: 3px;
+    border: 1px solid #759355;
+    background-color: $green;
+    margin: 15px 0;
+    cursor: pointer;
+    box-shadow: 0 -2px 0 0 hsla(0, 0%, 0%, 0.2) inset;
+    transition: 0.3s;
+
+    &:hover,
+    &:focus {
+      background-color: #61a512;
+      box-shadow: 0 2px 0 0 hsla(0, 0%, 0%, 0.2) inset;
+    }
+  }
+
+  &__button-title {
+    float: left;
+    color: white;
+    margin: 7px 0 0 90px;
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 28px;
+  }
+
+  &__button-place {
+    line-height: 28px;
+    margin: 7px 20px 0 0;
+    float: right;
+  }
+
+  /* ----- End Button add ticket ----- */
+
+  &__form-title {
+    height: 35px;
+    padding: 5px 0 15px 0;
+    border-bottom: solid 1px #e5e5e5;
+    margin-bottom: 20px;
+  }
+
+  &__form-title_color {
+    font-size: 15px;
+  }
+
+  &__form-number {
+    display: inline-block;
+    line-height: 40px;
+    width: 190px;
+    position: relative;
+
+    &-inner {
+      margin-left: 50px;
+    }
+  }
+
+  &__form-price {
+    display: inline-block;
+    width: 340px;
+  }
+
+  &__form-button {
+    display: inline-block;
+  }
+
+  &__form-price-value {
+    font-weight: bold;
+  }
+
+  &__info {
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 10px 20px 20px 20px;
+    border: 1px solid $gray;
+    box-shadow: 1px 3px 7px 0 $gray;
+    background-color: #fff;
+  }
+
+  &__new-client {
+    display: block;
+    margin: 10px;
+    border: solid 1px grey;
+  }
+
+  &__input-row {
+    display: block;
+    margin-top: 5px;
+    height: 47px;
+  }
+
+  &__radio-row {
+    margin-bottom: 20px;
+  }
+
+  &__radio-direction {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px;
+
+    &_check {
+      border-bottom: 4px green solid;
+    }
+  }
+
+  &__input-col {
+    color: gray;
+    border: 1px solid $gray;
+    outline: none;
+    border-radius: 3px;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 44px;
+    margin-bottom: 15px;
+
+    &:active,
+    &:focus {
+      border: 1px solid $blue;
+      box-shadow: 0 0 3px $blue;
+    }
+
+    &_readonly {
+      background-color: $blue-gray;
+      border: 1px solid $blue;
+
+      &:active,
+      &:focus {
+        border: 1px solid $blue;
+        box-shadow: none;
+      }
+    }
+  }
+
+  /* &__surname {
+  }
+*/
+  &__cl-surname {
+    width: 100%;
+  }
+
+  &__cl-name {
+    /* width: 316px;
+    margin-right: 6px; */
+    width: 100%;
+  }
+
+  &__cl-patronymic {
+    /* width: 316px; */
+    width: 100%;
+  }
+
+  &__gender {
+    float: left;
+    width: 120px;
+    margin-right: 6px;
+  }
+
+  &__cl-gender {
+    width: 120px;
+    margin-right: 6px;
+  }
+
+  &__cl-birthdate {
+    float: left;
+    width: 190px;
+    margin-right: 6px;
+  }
+
+  &__cl-phone {
+    width: 316px;
+  }
+
+  &__document {
+    float: left;
+    height: 44px;
+    width: 316px;
+    margin-right: 6px;
+  }
+
+  &__cl-document {
+    width: 316px;
+    margin-right: 6px;
+  }
+
+  &__cl-document-serial {
+    width: 316px;
+  }
+
+  &__footer {
+    margin: 30px 0;
+    padding: 0;
+
+    &-agreement {
+      border: 1px solid transparent;
+      border-radius: 3px;
+      color: #354b4f;
+      margin: 5px 0 25px;
+      line-height: 30px;
+      padding: 0 10px;
+    }
+
+    &-amount {
+      font-size: 16px;
+      float: left;
+      padding-left: 10px;
+
+      &-value {
+        margin: 0 5px;
+        font-size: 2rem;
+        color: $blue;
+      }
+    }
+  }
+
+  &__icon_add {
+    float: left;
+    font-size: 25px;
+    padding-top: 7px;
+    margin-left: 38px;
+  }
+
+  &__payment-total {
+    margin: 40px 0 10px;
+    padding: 10px;
+    text-align: right;
+    font-size: 18px;
+    color: gray;
+
+    &-value {
+      padding: 0 15px;
+      font-size: 30px;
+      font-weight: bold;
+      color: $blue;
+      line-height: 42px;
+    }
+  }
+
+  &__box-error {
+    height: 34px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: $red;
+    font-size: 12px;
+    line-height: 28px;
+    /* display: none; */
+
+    &_show {
+      display: block;
+    }
+  }
+
+  &__empty {
+    width: 100%;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: $red;
+    text-align: center;
+
+    &_hide {
+      display: none;
+    }
+
+    &_show {
+      display: block;
+    }
+  }
+  &__page-pay-info {
+    display: none;
+    margin-top: 30px;
+    color: $darkblue;
+    border-top: 1px solid $gray;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+}
+
+/* --------------------
+        checkbox
+   -------------------- */
+.ticket__checkbox-agreement {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin: 10px 0 0 20px;
+
+  &-text {
+    position: relative;
+    padding: 0 0 0 60px;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: 0;
+      width: 50px;
+      height: 26px;
+      border-radius: 13px;
+      background: #cdd1da;
+      box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+      transition: 0.2s;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: 2px;
+      width: 22px;
+      height: 22px;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      transition: 0.2s;
+    }
+  }
+
+  &:checked + &-text::before {
+    background: $green;
+
+    /* #9fd468; */
+  }
+
+  &:checked + &-text::after {
+    left: 26px;
+  }
+
+  &:focus + &-text::before {
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2),
+      0 0 0 3px rgba(255, 255, 0, 0.7);
+  }
+}
+
+/* -----------------
+        Button
+   ----------------- */
+.button {
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  border: 1px solid black;
+  padding: 0;
+
+  &_theme_blue {
+    background-color: $blue-gray;
+    color: $blue;
+    border: 1px solid $blue;
+    transition: 0.3s;
+
+    &:hover {
+      color: #fff;
+      background-color: $blue;
+      border: 1px solid $blue;
+    }
+  }
+
+  &_theme_orange {
+    border: none;
+    border-radius: 3px;
+    background-color: $orange;
+    color: #fff;
+    box-shadow: 0 -2px 0 0 hsla(0, 0%, 0%, 0.2) inset;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: #f16700;
+      opacity: 0.8;
+      box-shadow: 0 2px 0 0 hsla(0, 0%, 0%, 0.2) inset;
+      transition: 0.3s;
+    }
+  }
+
+  &__text {
+    text-transform: uppercase;
+  }
+
+  &_size_m {
+    font-size: 15px;
+    line-height: 28px;
+  }
+
+  &_size_l {
+    width: 100%;
+    font-size: 17px;
+    line-height: 45px;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+.ticket__button-buy {
+  float: right;
+  height: 35px;
+  width: 200px;
+  margin: 7px 10px 0 0;
+  border-radius: 3px;
+
+  &_disabled {
+    opacity: 0.4;
+  }
+}
+
+.ticket__button-del {
+  background-color: #fff;
+  border-radius: 3px;
+  color: $blue;
+  border: 1px solid $blue;
+  padding: 5px 15px;
+  transition: 0.3s;
+
+  &:hover {
+    color: #fff;
+    border: 1px solid $orange;
+    background-color: $orange;
+  }
+
+  &:active {
+    background-color: #dd6000;
+  }
+}
+
+.icon {
+  display: block;
+}
+
+.input:focus {
+  outline: none;
+}
+
+/* --------------------
+      datepicker
+   -------------------- */
+.dp-note {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  font-size: 0.6rem;
+  text-align: center;
+  top: 70%;
+  width: 50px;
+
+  &_red {
+    color: $red;
+  }
+
+  &_green {
+    color: $green;
+
+    &::after {
+      content: "\20BD";
+    }
+  }
+}
+
+/* --------------------
+       ui-selectmenu
+   -------------------- */
+.ticket__choose_ui-selectmenu-button {
+  /* width: 608px; */
+  border: solid 2px #fff;
+  height: 19px;
+  outline: none;
+}
+
+.ticket__info_ui-selectmenu-button {
+  border: solid 1px $gray;
+  height: 19px;
+  outline: none;
+
+  &:focus {
+    border: 1px solid $blue;
+    box-shadow: 0 0 3px $blue;
+  }
+
+  &_red {
+    border: solid 1px $red;
+  }
+
+  &_red_bold {
+    border: solid 2px $red;
+  }
+
+  &_green {
+    border: solid 1px #4caf50;
+    box-shadow: 0 0 3px #93ec81;
+  }
+}
+
+.ticket__info_ui-selectmenu-text {
+  font-size: 0.95em;
+  font-family: Arial, serif;
+  color: gray;
+
+  &_bold {
+    font-size: 1.1em;
+    font-weight: 600;
+    font-family: Arial, serif;
+  }
+}
+
+/* --------------------
+     error_success
+   -------------------- */
+.ticket__input_error {
+  border: solid 1px $red;
+
+  &_bold {
+    border: solid 2px $red;
+  }
+}
+
+.ticket__input_success {
+  border: solid 1px #4caf50;
+  box-shadow: 0 0 3px #93ec81;
+}
+
+/* ----- clearfix ----- */
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+/* ----- loader ----- */
+.loader__animation {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1001;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 0;
+  margin: 0;
+
+  &-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: url("../img/loading.svg") 50% 50% no-repeat;
+    margin-left: -32px;
+    margin-top: -32px;
+    width: 64px;
+    height: 64px;
+  }
+}

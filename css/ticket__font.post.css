@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon/icomoon.eot');
+  src: url('../fonts/icomoon/icomoon.eot?lx2ao3#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/icomoon.ttf?lx2ao3') format('truetype'),
+    url('../fonts/icomoon/icomoon.woff?lx2ao3') format('woff'),
+    url('../fonts/icomoon/icomoon.svg?lx2ao3#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/roboto/roboto-regular-webfont.woff2) format("woff2")
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 400;
+  src: url(../fonts/roboto/roboto-italic-webfont.woff2) format("woff2")
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/roboto/roboto-bold-webfont.woff2) format("woff2")
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 700;
+  src: url(../fonts/roboto/roboto-bolditalic-webfont.woff2) format("woff2")
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/opensans/opensans.woff2) format("woff2")
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-style: italic;
+  font-weight: 400;
+  src: url(../fonts/opensans/opensansitalic.woff2) format("woff2")
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/opensans/opensansbold.woff2) format("woff2")
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-style: italic;
+  font-weight: 700;
+  src: url(../fonts/opensans/opensansbolditalic.woff2) format("woff2")
+}

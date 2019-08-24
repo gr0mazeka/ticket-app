@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Ticket" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>Ticket</title>
+    <link rel="stylesheet" href="./dist/style.min.css" />
+  </head>
+
+  <body>
+    <div style="margin-bottom: 100px;"></div>
+
+    <form name="order_form" id="order_form"></form>
+    <p class="ticket__empty ticket__empty_hide">Ваша корзина пуста</p>
+    <div class="ticket__page-pay-info">
+      <p>
+        Для оплаты (ввода реквизитов Вашей карты) Вы будете перенаправлены на
+        платежный шлюз ПАО СБЕРБАНК. Соединение с платежным шлюзом и передача
+        информации осуществляется в защищенном режиме с использованием протокола
+        шифрования SSL. В случае если Ваш банк поддерживает технологию
+        безопасного проведения интернет-платежей Verified By Visa, MasterCard
+        SecureCode, MIR Accept, J-Secure для проведения платежа также может
+        потребоваться ввод специального пароля.
+      </p>
+      <p>
+        Конфиденциальность сообщаемой персональной информации обеспечивается ПАО
+        СБЕРБАНК. Введенная информация не будет предоставлена третьим лицам за
+        исключением случаев, предусмотренных законодательством РФ. Проведение
+        платежей по банковским картам осуществляется в строгом соответствии с
+        требованиями платежных систем МИР, Visa Int., MasterCard Europe Sprl,
+        JCB.
+      </p>
+    </div>
+
+    <div class="loader__animation">
+      <span class="loader__animation-img"></span>
+    </div>
+
+    <div style="margin-top: 200px;"></div>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="js/confirm.js"></script>
+  </body>
+</html>
